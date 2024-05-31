@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import SideNavbar from "./components/SideNavbar";
+import SearchBar from "./components/SearchBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +13,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="flex">
+      <SideNavbar />
+          <div className="grid grid-cols-1 md:grid-cols-2 px-6 md:px-10 w-full mt-10">
+            <div>
+              <SearchBar />
+            </div>
+
+            <div>
+              {/* Google Map */}
+              Google Map
+            </div>
+          </div>
+          {children}
+      </body>
     </html>
   );
 }
