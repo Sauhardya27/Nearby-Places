@@ -3,6 +3,7 @@ import "./globals.css";
 import SideNavbar from "./components/SideNavbar";
 import SearchBar from "./components/SearchBar";
 import CategoryList from "./components/CategoryList";
+import BusinessList from "./components/BusinessList";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
             <div>
               <SearchBar />
               <CategoryList />
+              <BusinessList />
             </div>
 
             <div>
